@@ -1,0 +1,28 @@
+{% extends 'main.html' %} <!-- Inserção do main.html -->
+
+{% block content %}
+    <form name="form-users" id="formUsers" method="post" action="/store/">
+        <div class="col-6 mt-4 m-auto">
+            {% if msg %}
+                <div class="alert {{class}}">
+                    {{msg}}
+                </div>
+            {% endif %}
+
+            {% csrf_token %}
+            <!--Criando campos para inserção dos dados dos usuarios -->
+            <input class="form-control mt-4" type="text" name="biografia" id="biografia" placeholder="Adicione uma biografia para seu perfil:">
+            <select name="cars">
+                <option value="feminino">Volvo</option>
+                <option value="Masculino">Saab</option>
+                <option value="Não-Binário">Fiat</option>
+                <option value="Outros">Audi</option>
+                <option value="Prefiro não responder">Audi</option>
+            </select>
+            <input class="form-control mt-4" type="text" name="localizacao" id="localizacao" placeholder="Adicione sua Localização:">
+            <input class="btn btn-primary mt-4" type="submit" value="Cadastrar Perfil">
+
+        </div>
+
+    </form>
+{% endblock %}
