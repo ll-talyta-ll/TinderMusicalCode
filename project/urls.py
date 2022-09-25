@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
 from app.views import home,create,store, painel, dologin, dashboard, logouts, changePassword, doPerfil
 
 urlpatterns = [
