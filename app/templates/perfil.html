@@ -12,12 +12,12 @@
             {% csrf_token %}
             <!--Criando campos para inserção dos dados dos usuarios -->
             <input class="form-control mt-4" type="text" name="biografia" id="biografia" placeholder="Adicione uma biografia para seu perfil:">
-            <select name="cars">
-                <option value="feminino">Volvo</option>
-                <option value="Masculino">Saab</option>
-                <option value="Não-Binário">Fiat</option>
-                <option value="Outros">Audi</option>
-                <option value="Prefiro não responder">Audi</option>
+            <select name="genero">
+                <option value="genero">feminino</option>
+                <option value="genero">Masculino</option>
+                <option value="genero">Não-Binário</option>
+                <option value="genero">Outros</option>
+                <option value="genero">Prefiro não responder</option>
             </select>
             <input class="form-control mt-4" type="text" name="localizacao" id="localizacao" placeholder="Adicione sua Localização:">
             <input class="btn btn-primary mt-4" type="submit" value="Cadastrar Perfil">

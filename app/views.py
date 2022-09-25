@@ -62,6 +62,5 @@ def changePassword(request):
     return redirect('/painel/')
 
 def doPerfil(request):
-    return render(request, 'doPerfil.html')
-
+    return render(request, 'home.html')
 
