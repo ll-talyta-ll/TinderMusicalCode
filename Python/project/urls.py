@@ -23,6 +23,6 @@ urlpatterns = [
     path('create/', create),
     path('store/', store),
     path('painel/', painel),
-    path('dologin/', dologin),
+    #path('dologin/', dologin),
     path('dashboard/', dashboard),
 ]

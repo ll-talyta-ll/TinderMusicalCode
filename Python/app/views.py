@@ -32,16 +32,16 @@ def painel(request):
     return render(request, 'painel.html')
 
 #Processar o Login
-def dologin(request):
-    data = {}
-    user = authenticate(username=request.POST['user'], password=request.POST['password'])
-    if user is not None:
-        login(request, user)
-        return redirect('/dashboard/')
-    else:
-        data['msg'] = 'Usuário ou Senha incorretos!'
-        data['class'] = 'alert-danger'
-        return render(request, 'painel.html', data)
+#def dologin(request):
+    #data = {}
+    #user = authenticate(username=request.POST['user'], password=request.POST['password'])
+    #if user is not None:
+        #login(request, user)
+        #return redirect('/dashboard/')
+    #else:
+        #data['msg'] = 'Usuário ou Senha incorretos!'
+        #data['class'] = 'alert-danger'
+        #return render(request, 'painel.html', data)
 
 #Pagina inicial do dashBoard
 def dashboard(request):

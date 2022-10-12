@@ -1,5 +1,5 @@
 (function (win, doc){
     "use strict";
 
-    alert('oi')
+    alert('teste do site')
 })(window, document);

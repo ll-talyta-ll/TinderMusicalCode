@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,10 +79,10 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sistema',
-        'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': '',
+        'NAME': 'syncandsing',
+        'HOST': 'mysqlserver.cjysrlze2w3y.us-east-1.rds.amazonaws.com',
+        'USER': 'admin',
+        'PASSWORD': 'Brasilhexa2022',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': 'SET default_storage_engine=InnoDB'
@@ -123,7 +125,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIR = ('/static/')
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
