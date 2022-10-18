@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_4694e5e3bee15ff',
-        'HOST': 'us-cdbr-east-06.cleardb.net',
-        'USER': 'b967926582a614',
-        'PASSWORD': '952b636a',
+        'NAME': 'dbsingandsync',
+        'HOST': 'mysqlserver.cjysrlze2w3y.us-east-1.rds.amazonaws.com',
+        'USER': 'admin',
+        'PASSWORD': 'Brasilhexa2022',
         'PORT': '3306',
     }
 }
