@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'syncandsing',
+        'NAME': 'dbsingandsync',
         'HOST': 'mysqlserver.cjysrlze2w3y.us-east-1.rds.amazonaws.com',
         'USER': 'admin',
         'PASSWORD': 'Brasilhexa2022',
