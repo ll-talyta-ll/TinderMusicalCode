@@ -57,7 +57,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,11 +79,14 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dbsingandsync',
-        'HOST': 'mysqlserver.cjysrlze2w3y.us-east-1.rds.amazonaws.com',
+        'NAME': 'dbmysql on AWS',
+        'HOST': 'mysqlserver.ctxtwwh0ilx9.us-east-1.rds.amazonaws.com',
         'USER': 'admin',
         'PASSWORD': 'Brasilhexa2022',
         'PORT': '3306',
+        'OPTIONS': {
+            'init_command': 'SET default_storage_engine=InnoDB'
+        }
     }
 }
 
@@ -126,6 +129,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIR = ('/static/')
 django_heroku.settings(locals())
+MEDIA_ROOT = ' '
+MEDIA_URL = ' '
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

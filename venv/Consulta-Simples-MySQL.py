@@ -3,10 +3,10 @@ from mysql.connector import Error
 
 try:
     con = mysql.connector.connect(
-        host='mysqlserver.cjysrlze2w3y.us-east-1.rds.amazonaws.com',
+        host='mysqlserver.ctxtwwh0ilx9.us-east-1.rds.amazonaws.com',
         user='admin',
         password='Brasilhexa2022',
-        database='syncandsing',
+        database='dbmysql',
         port='3306')
     consulta_sql = "select * from auth_user"
     cursor = con.cursor()
